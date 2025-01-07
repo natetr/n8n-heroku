@@ -22,6 +22,9 @@ WORKDIR /home/node/packages/cli
 
 ENTRYPOINT []
 
+COPY puppeteer-scrape.js /puppeteer-scrape.js
+RUN chmod +x /puppeteer-scrape.js
+
 COPY ./entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
